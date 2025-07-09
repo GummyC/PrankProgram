@@ -8,7 +8,7 @@ class sounds:
         self.columns = ["url","soundName","Volume"]
 
         self.audio_files = [
-            ["https://github.com/GummyC/PrankProgram/raw/refs/heads/main/audios/Kitchen.mp3","Kitchen.mp3",0.06],
+            # ["https://github.com/GummyC/PrankProgram/raw/refs/heads/main/audios/Kitchen.mp3","Kitchen.mp3",0.06],
             ["https://github.com/GummyC/PrankProgram/raw/refs/heads/main/audios/Boom.mp3","Boom.mp3",0.03],
             ["https://github.com/GummyC/PrankProgram/raw/refs/heads/main/audios/Airhorn.mp3","Airhorn.mp3",0.02]
         ]
@@ -29,7 +29,7 @@ class playSound:
     def __init__(self):
         self.sound = sounds()
         
-        self.random_track = self.sound.get_track().sample(n=1)
+        self.random_track = self.sound.get_track()
         self.url_link = self.random_track.iloc[0]["url"]
         self.file_name = self.random_track.iloc[0]["soundName"]
 
@@ -77,3 +77,5 @@ class playSound:
 # so i remember how to call in future
 # test = playSound()
 # test.Play()
+test = playSound()
+test.Play()
