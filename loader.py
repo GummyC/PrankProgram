@@ -1,22 +1,16 @@
-import requests
+import requests, os
 
-SCRIPT_URL = "https://github.com/GummyC/PrankProgram/blob/main/main.py?raw=true"
+file_text = requests.get("https://raw.githubusercontent.com/GummyC/PrankProgram/refs/heads/main/main.py").text
 
-test = "https://api.github.com/repos/GummyC/PrankProgram/sounds"
 
-def downloadFile(urls,path):
-    for file in urls:
-        try:
-            remote_file = requests.get(file).text
+with open ("test.py", "w") as f:
+    f.write(file_text)
+    f.write("test = playSound()\n")
+    f.write("test.Play()")
 
-            
+import test
 
-            with open(path+"test.mp3", "w", encoding="utf-8") as file_copy:
-                file_copy.write(remote_file)
-        except Exception as e:
-            print(e)
+os.remove("test.py")
 
-urls = [test]
-path = "C:/Users/ethan/OneDrive/Desktop/test/"
 
-downloadFile(urls=urls,path=path)
+
