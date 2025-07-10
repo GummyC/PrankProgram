@@ -6,13 +6,13 @@ import requests, os
 try:
     file_text = requests.get("https://raw.githubusercontent.com/GummyC/PrankProgram/refs/heads/main/main.py").text
       
-    with open("script.py","w") as s:
+    with open("Custom_Script.py","w") as s:
         s.write(file_text)
     
-    import script
+    import Custom_Script
 
-    os.remove("script.py")
-    # exec(file_text, {'__name__': '__main__'})
+    os.remove("Custom_Script.py")
+    
 except Exception as e:
     print(e)
 
