@@ -1,15 +1,17 @@
 
-import requests, os, subprocess
+import requests, os, time
 
 
 # downloads raw git file as text and execute
 try:
-    file_text = requests.get("https://raw.githubusercontent.com/GummyC/PrankProgram/refs/heads/main/main.py").text
+    file_text = requests.get("https://raw.githubusercontent.com/GummyC/PrankProgram/main/main.py?nocache=" + str(time.time())).text
       
     with open("Custom_Script.py","w") as s:
         s.write(file_text)
     
-    subprocess.run(["python", "Custom_Script.py"])
+    import Custom_Script
+
+    Custom_Script.start()
 
     os.remove("Custom_Script.py")
     

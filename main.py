@@ -81,17 +81,17 @@ class playSound:
             time.sleep(0.1)
 
 
+def start():
+    # min and max wait time (secconds)
+    min_wait = 1200
+    max_wait = 28800
 
-# min and max wait time (secconds)
-min_wait = 1200
-max_wait = 28800
+    # plays sound max three times at random intervals
+    for i in range(3):
+        time.sleep(random.randint(1,5)) #for testing
 
-# plays sound max three times at random intervals
-for i in range(3):
-    time.sleep(random.randint(1,5)) #for testing
-
-    # time.sleep(random.randint(min_wait,max_wait))
-    player = playSound()
-    player.Play()
+        # time.sleep(random.randint(min_wait,max_wait))
+        player = playSound()
+        player.Play()
 
 
