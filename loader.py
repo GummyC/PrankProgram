@@ -11,7 +11,6 @@ try:
     
     import script
 
-
     os.remove("script.py")
     # exec(file_text, {'__name__': '__main__'})
 except Exception as e:

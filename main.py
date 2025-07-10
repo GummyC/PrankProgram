@@ -10,9 +10,9 @@ class sounds:
 
         self.audio_files = [
             ["https://github.com/GummyC/PrankProgram/raw/refs/heads/main/audios/Kitchen.mp3","Kitchen.mp3",0.06],
-            ["https://github.com/GummyC/PrankProgram/raw/refs/heads/main/audios/Boom.mp3","Boom.mp3",0.03],
-            ["https://github.com/GummyC/PrankProgram/raw/refs/heads/main/audios/Airhorn.mp3","Airhorn.mp3",0.02],
-            ["https://github.com/GummyC/PrankProgram/raw/refs/heads/main/audios/Mosquito.mp3","Mosquito.mp3",0.02]
+            # ["https://github.com/GummyC/PrankProgram/raw/refs/heads/main/audios/Boom.mp3","Boom.mp3",0.03],
+            # ["https://github.com/GummyC/PrankProgram/raw/refs/heads/main/audios/Airhorn.mp3","Airhorn.mp3",0.02],
+            ["https://github.com/GummyC/PrankProgram/raw/refs/heads/main/audios/Mosquito.mp3","Mosquito.mp3",0.05]
         ]
 
     # returns the finished data set
