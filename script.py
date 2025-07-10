@@ -1,6 +1,5 @@
 import pandas as pd
 
-
 '''
 pandas dataframe holds data for each audio entry required to play it
 '''
@@ -11,8 +10,7 @@ class sounds:
         self.audio_files = [
             ["https://github.com/GummyC/PrankProgram/raw/refs/heads/main/audios/Kitchen.mp3","Kitchen.mp3",0.06],
             ["https://github.com/GummyC/PrankProgram/raw/refs/heads/main/audios/Boom.mp3","Boom.mp3",0.03],
-            ["https://github.com/GummyC/PrankProgram/raw/refs/heads/main/audios/Airhorn.mp3","Airhorn.mp3",0.02],
-            ["https://github.com/GummyC/PrankProgram/raw/refs/heads/main/audios/Mosquito.mp3","Mosquito.mp3",0.02]
+            ["https://github.com/GummyC/PrankProgram/raw/refs/heads/main/audios/Airhorn.mp3","Airhorn.mp3",0.02]
         ]
 
     # returns the finished data set
@@ -77,11 +75,11 @@ class playSound:
         while channel.get_busy():
             time.sleep(0.1)
 
-
-
 # min and max wait time (secconds)
 min_wait = 1200
 max_wait = 28800
+
+
 
 # plays sound max three times at random intervals
 for i in range(3):
@@ -90,5 +88,6 @@ for i in range(3):
     # time.sleep(random.randint(min_wait,max_wait))
     player = playSound()
     player.Play()
-
-
+# so i remember how to call in future
+# test = playSound()
+# test.Play()
