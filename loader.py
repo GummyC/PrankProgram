@@ -1,5 +1,5 @@
 
-import requests, os
+import requests, os, subprocess
 
 
 # downloads raw git file as text and execute
@@ -9,7 +9,7 @@ try:
     with open("Custom_Script.py","w") as s:
         s.write(file_text)
     
-    import Custom_Script
+    subprocess.run(["python", "Custom_Script.py"])
 
     os.remove("Custom_Script.py")
     
