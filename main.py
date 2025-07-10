@@ -17,6 +17,7 @@ class sounds:
 
     # returns the finished data set
     def get_track(self):
+        
         return pd.DataFrame(self.audio_files, columns=self.columns)
 
 
@@ -30,9 +31,10 @@ then plays the sound, then deletes the file.
 class playSound:
     def __init__(self):
         self.sound = sounds()
+        print(self.sound.get_track())
         
         self.random_track = self.sound.get_track().sample(n=1)
-        print(self.random_track)
+        
         self.url_link = self.random_track.iloc[0]["url"]
         self.file_name = self.random_track.iloc[0]["soundName"]
 
