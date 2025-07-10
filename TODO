@@ -1,0 +1,10 @@
+make loader more universal by allowing it to run any program
+change shared variable names to more universal ones to help with ease of syntax
+
+
+Main:
+    - make play button just execute file so that loader can call the same function regardless of files purpose
+    - move sleep loop to the play function so that the loader's sole purpose is to load any py file
+
+Loader:
+    - remove sleep loop

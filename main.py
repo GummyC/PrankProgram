@@ -19,7 +19,7 @@ class sounds:
 
 
 
-import pygame, time, requests, os
+import pygame, time, requests, os, random
 
 '''
 uses github to hold files in the cloud, downloading the randomly selected file,
@@ -35,6 +35,8 @@ class playSound:
 
     # executes the order of functions
     def Play(self):
+
+        
         self.download_audio()
         self.play_audio(),
         self.delete_audio()
@@ -73,7 +75,19 @@ class playSound:
         while channel.get_busy():
             time.sleep(0.1)
 
+# min and max wait time (secconds)
+min_wait = 1200
+max_wait = 28800
 
+
+
+# plays sound max three times at random intervals
+for i in range(3):
+    time.sleep(random.randint(1,5)) #for testing
+
+    # time.sleep(random.randint(min_wait,max_wait))
+    player = playSound()
+    player.Play()
 # so i remember how to call in future
 # test = playSound()
 # test.Play()
