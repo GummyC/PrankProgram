@@ -16,7 +16,7 @@ command = f'{full_directory} && dir && py -m PyInstaller --onefile --clean launc
 
 subprocess.run(command, shell=True)
 shutil.rmtree("launch_files/build")
-os.remove("launch_files/main_script.spec")
-shutil.move("launch_files/dist/main_script.exe","launch_files/")
+os.remove("launch_files/launcher.spec")
+shutil.move("launch_files/dist/launcher.exe","launch_files/")
 shutil.rmtree("launch_files/dist")
     
