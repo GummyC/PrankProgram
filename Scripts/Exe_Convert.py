@@ -1,6 +1,7 @@
 import subprocess, shutil, os
 from pathlib import Path
 
+# not working atm
 try:
     os.remove("main_script.exe")
 except:
