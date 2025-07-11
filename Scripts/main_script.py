@@ -15,7 +15,7 @@ class sounds:
             # ["https://github.com/GummyC/PrankProgram/raw/refs/heads/main/audios/Mosquito.mp3","Mosquito.mp3",0.05]
         ]
 
-    # returns the finished data set
+    # returns the finished data set.
     def get_track(self):
         
         return pd.DataFrame(self.audio_files, columns=self.columns)
