@@ -10,7 +10,7 @@ full_directory = ("cd "+(directory.title()).replace("\\","/"))
 print(full_directory)
 command_list = [full_directory,"dir"]
 
-command = f'{full_directory} && dir && py -m PyInstaller --onefile --clean loader.py'
+command = f'{full_directory} && dir && py -m PyInstaller --onefile --clean launcher.py'
 
 
 
