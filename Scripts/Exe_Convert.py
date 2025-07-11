@@ -19,6 +19,8 @@ command = f'{full_directory} && dir && py -m PyInstaller --onefile --clean main_
 
 
 subprocess.run(command, shell=True)
+
+# debloat files
 shutil.rmtree("Scripts/build")
 os.remove("Scripts/main_script.spec")
 shutil.move("Scripts/dist/main_script.exe","Scripts/")
